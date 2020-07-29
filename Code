@@ -1,0 +1,25 @@
+#Using Time Module
+import time
+#starting the time
+start = time.time()
+# programs body
+for i in range(10):
+    print("Hello welcome to my channel")
+#sleeping for 1 sec to get 10 sec runtime
+time.sleep(1)
+#endinf the time
+end = time.time()
+print(f"Total execution time is {end-start}")
+
+#Using Timeit Module
+import timeit
+testing_code = "from math import factorial"
+statement = """
+for i in range(5):
+    factorial(i)
+"""
+print(f"Execution time is {timeit.timeit(setup=testing_code,stmt=statement,number=100000)}")
+
+
+
+
